@@ -1,9 +1,9 @@
-# yang-prompt
+# ge-tips
 是一种浮框插件，鼠标进入显示，移除隐藏（或者点击）
 如果当前元素上方空间不够显示浮框，则自动在下方显示
 
 Install
-npm install yang-prompt --save
+npm install git-tips --save
 
 ### Compiles and hot-reloads for development
 npm run serve
@@ -14,8 +14,9 @@ npm run build
 vue项目中全局引入
 在 main.js中引入插件
 
-import prompt from '@/plugins/index'
-Vue.prototype.$prompt = prompt.install;
+import getTips from 'get-tips'
+
+Vue.prototype.$getTips = getTips.install;
 
 使用方法：
 在任意组件中调用插件并可以传参
@@ -27,7 +28,7 @@ Vue.prototype.$prompt = prompt.install;
 
 some.vue页面：
 mounted() {
-    this.$prompt({
+    this.$getTips({
         node: this.$refs.tips,// 浮框的显示位置-> 必传
         context: "这是内容...", //浮框的显示内容-> 必传
         promptClass: "add-class",//浮框最外层类名-> 非必传
@@ -38,11 +39,11 @@ mounted() {
 }
 
 也可以在当前组件直接引用：
-import prompt from '@/plugins/index'
+import prompt from 'git-tips'
 
-prompt = prompt.install;
+getTips = getTips.install;
 
-通过调用prompt并传入需要参数
+getTips
 
 
 
