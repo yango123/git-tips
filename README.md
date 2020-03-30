@@ -27,13 +27,19 @@ Vue.prototype.$getTips = getTips.install;
 2、确保页面元素加载完成后调用方法
 
 some.vue页面：
+
 mounted() {
     this.$getTips({
         node: this.$refs.tips,// 浮框的显示位置-> 必传
+        
         context: "这是内容...", //浮框的显示内容-> 必传
+        
         promptClass: "add-class",//浮框最外层类名-> 非必传
+        
         trigger: "click",//浮框的显示方式（默认鼠标进出）-> 非必传
+        
         icon: "prompt-icon",//浮框的图标-> 非必传
+        
         iconSlot: "<em></em>"//浮框的图标位置插入-> 非必传
     })
 }
