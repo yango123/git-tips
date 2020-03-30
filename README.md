@@ -28,8 +28,11 @@ Vue.prototype.$getTips = getTips.install;
 
 some.vue页面：
 
+
 mounted() {
+
     this.$getTips({
+    
         node: this.$refs.tips,// 浮框的显示位置-> 必传
         
         context: "这是内容...", //浮框的显示内容-> 必传
